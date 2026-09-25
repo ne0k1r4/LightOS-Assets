@@ -14,6 +14,7 @@ The theme is installed for the current user under `~/.local/share/icons/LightOS`
 
 - `icons/LightOS/scalable/apps/` — LightOS application icons.
 - `icons/LightOS/scalable/mimetypes/` — text, code, archive, and office file icons.
+- Audio MIME icons use the same `audio-headphones.png` artwork as the Waybar volume indicator.
 - `icons/LightOS/scalable/status/` — battery, Wi-Fi, Bluetooth, and temperature symbols.
 - `tools/generate-icons.py` — regenerates the checked-in SVG icon files.
 

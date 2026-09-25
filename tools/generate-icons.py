@@ -3,6 +3,7 @@
 
 from html import escape
 from pathlib import Path
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 ICON_ROOT = ROOT / "icons/LightOS/scalable"
@@ -110,6 +111,35 @@ def main() -> None:
 
     for name in ("battery", "network-wireless", "bluetooth", "temperature"):
         save(f"status/{name}.svg", status_icon(name))
+
+    # Keep audio MIME icons consistent with the headphones artwork used by
+    # Waybar. The raster source is preserved at its native 128x128 size; the
+    # icon theme scales it for other requested sizes.
+    audio_source = ROOT / "assets/audio-headphones.png"
+    audio_default = ICON_ROOT / "mimetypes/audio-x-generic.png"
+    audio_default.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(audio_source, audio_default)
+    audio_aliases = (
+        "audio-mp3",
+        "audio-midi",
+        "audio-aac",
+        "audio-mpeg",
+        "audio-ogg",
+        "audio-flac",
+        "audio-wav",
+        "audio-x-aac",
+        "audio-x-aiff",
+        "audio-x-m4a",
+        "audio-x-mpeg",
+        "audio-x-ms-wma",
+        "audio-x-opus",
+        "audio-x-vorbis",
+        "audio-x-wav",
+    )
+    for name in audio_aliases:
+        alias = audio_default.parent / f"{name}.png"
+        alias.unlink(missing_ok=True)
+        alias.symlink_to(audio_default.name)
 
 
 if __name__ == "__main__":
