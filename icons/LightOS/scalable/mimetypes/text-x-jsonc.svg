@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M15 5h23l13 13v39a3 3 0 0 1-3 3H15a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4Z" fill="#f4f6fb" stroke="#172033" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M38 5v13h13" fill="none" stroke="#172033" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M19 27h23M19 34h18" stroke="#b8c1d2" stroke-width="3" stroke-linecap="round"/>
+  <rect x="17" y="39" width="30" height="14" rx="5" fill="#48b889"/>
+  <text x="32" y="49.5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">JSON</text>
+</svg>

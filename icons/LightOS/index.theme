@@ -1,0 +1,26 @@
+[Icon Theme]
+Name=LightOS
+Comment=Original scalable LightOS icon set
+Directories=scalable/apps,scalable/mimetypes,scalable/status
+Inherits=hicolor
+
+[scalable/apps]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=512
+Context=Applications
+
+[scalable/mimetypes]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=512
+Context=MimeTypes
+
+[scalable/status]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=512
+Context=Status
