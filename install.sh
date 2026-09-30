@@ -16,6 +16,12 @@ if [[ -d "$ROOT/wallpaper" ]]; then
     cp -an "$ROOT/wallpaper/." "$WALLPAPER_DEST/"
 fi
 
+BASH_DEST="${XDG_CONFIG_HOME:-$HOME/.config}/Light/bash"
+if [[ -d "$ROOT/bash" ]]; then
+    mkdir -p "$BASH_DEST"
+    cp -an "$ROOT/bash/." "$BASH_DEST/"
+fi
+
 if command -v gtk-update-icon-cache >/dev/null; then
     gtk-update-icon-cache -f "$DEST" >/dev/null 2>&1 || true
 fi
