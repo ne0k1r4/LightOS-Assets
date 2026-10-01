@@ -20,6 +20,8 @@ The theme is installed for the current user under `~/.local/share/icons/LightOS`
 - `bash/` — 29 PNG banner images displayed at terminal startup by `light-banner.sh`.
 - `wallpaper/Dark/` — Dark theme wallpapers (images + videos) installed to `~/.config/Light/wallpaper/Dark/`.
 - `wallpaper/Light/` — Light theme wallpapers (images + videos) installed to `~/.config/Light/wallpaper/Light/`.
+- `assets/waybar/icons/` — Waybar icon set installed to `~/.config/waybar/icons/`.
+- `assets/waybar/Dark/icons/` — Same icons for the Dark Waybar theme.
 
 The SVGs are new LightOS artwork. No downloaded raster sheets or third-party theme sources are needed.
 
