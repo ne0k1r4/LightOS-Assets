@@ -1,45 +1,44 @@
 # LightOS Assets
 
-Original, source-editable LightOS SVG icons. The artwork in this repository is drawn from simple vector geometry and does not require external image files or icon packages.
+Gothic anime artwork, icons, wallpapers, and bash banners for the LightOS desktop.
 
-## Install the icon theme
+## Install
 
 ```sh
+git clone https://github.com/ne0k1r4/LightOS-Assets.git
+cd LightOS-Assets
 ./install.sh
 ```
 
-The theme is installed for the current user under `~/.local/share/icons/LightOS`. Select **LightOS** in the desktop's icon-theme settings. The icons are scalable SVGs and can be rendered by GTK at different sizes. The visualizer background is installed to `~/.config/Light/assets/settings/` for the LightOS Widgets visualizers.
+Installs to the current user — no root required.
+
+## What's installed
+
+| Asset | Destination |
+|---|---|
+| Icon theme (SVG + PNG) | `~/.local/share/icons/LightOS/` |
+| PNG mime icons (16px + 128px) | `~/.icons/LightOS/16/mimetypes/` and `128/mimetypes/` |
+| Waybar icons | `~/.config/waybar/icons/` and `Dark/icons/` |
+| Settings background | `~/.config/Light/assets/settings/` |
+| Wallpapers (Dark + Light) | `~/.config/Light/wallpaper/` |
+| Bash banner images | `~/.config/Light/bash/` |
+
+After install, select **LightOS** in your icon theme settings or run:
+```sh
+gtk-update-icon-cache -f -t ~/.icons/LightOS
+```
 
 ## Contents
 
-- `icons/LightOS/scalable/apps/` — LightOS application icons.
-- `icons/LightOS/scalable/mimetypes/` — text, code, archive, and office file icons.
-- Audio MIME icons use the same `audio-headphones.png` artwork as the Waybar volume indicator.
-- `icons/LightOS/scalable/status/` — battery, Wi-Fi, Bluetooth, and temperature symbols.
-- `tools/generate-icons.py` — regenerates the checked-in SVG icon files.
-- `bash/` — 29 PNG banner images displayed at terminal startup by `light-banner.sh`.
-- `wallpaper/Dark/` — Dark theme wallpapers (images + videos) installed to `~/.config/Light/wallpaper/Dark/`.
-- `wallpaper/Light/` — Light theme wallpapers (images + videos) installed to `~/.config/Light/wallpaper/Light/`.
-- `assets/waybar/icons/` — Waybar icon set installed to `~/.config/waybar/icons/`.
-- `assets/waybar/Dark/icons/` — Same icons for the Dark Waybar theme.
+- `icons/LightOS/scalable/` — SVG app, mime, and status icons
+- `icons/LightOS/16/mimetypes/` — 100+ gothic anime PNG mime icons (128×128px)
+- `icons/LightOS/128/mimetypes/` — same set at full size
+- `assets/waybar/icons/` — Waybar panel icons
+- `assets/settings/` — Settings app background artwork
+- `wallpaper/Dark/` — Dark theme wallpapers (images + videos)
+- `wallpaper/Light/` — Light theme wallpapers (images + videos)
+- `bash/` — 29 gothic anime PNG images for terminal startup banner
 
-The SVGs are new LightOS artwork. No downloaded raster sheets or third-party theme sources are needed.
+## License
 
-## Wallpaper library
-
-`wallpaper/Dark/` contains:
-- Images: `2.png`, `44.png`, `5.png`, `cc.png`, `ss.png`, `death-note-manga-panel.png`,
-  `enchanted-garden.png`, `misa-amane-dark-angel.jpg`, `misa-amane-dark-kawaii.png`,
-  `misa-amane-monochrome.png`, `misa-amane-portrait.jpg`, `misa-amane-poster.png`,
-  `misa-amane-red-banner.png`, `misa-amane-roses.jpg`, `neon-city.png`
-- Videos: `blue-city-at-night.mp4`, `death-note-eye-loop.mp4`, `monochrome-rain.mp4`,
-  `night-lake-stars.mp4`, `winged-altar.mp4`
-
-`wallpaper/Light/` contains:
-- Images: `2.png`, `5.png`, `death-note-manga-panel.png`, `enchanted-garden.png`,
-  `misa-amane-pink-desktop.jpg`, `misa-amane-portrait.jpg`, `misa-amane-poster.png`,
-  `misa-amane-red-banner.png`, `misa-amane-roses.jpg`, `misa-amane-soft-pink.jpg`,
-  `neon-city.png`, `silver-angel.jpg`, `silver-angel.png`
-- Videos: `22.mp4`, `snow-angel.mp4`
-
-Note: `local-personal-video.mp4` exists only in the live configuration and is never committed.
+MIT — see [LICENSE](LICENSE).
