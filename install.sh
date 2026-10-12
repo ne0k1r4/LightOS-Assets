@@ -37,3 +37,16 @@ if command -v gtk-update-icon-cache >/dev/null; then
     gtk-update-icon-cache -f "$DEST" >/dev/null 2>&1 || true
 fi
 printf 'Installed the LightOS icon theme to %s\n' "$DEST"
+
+# LIGHTOS_CLOCK_ASSETS
+CLOCK_SOURCE="$ROOT/assets/clocks/clock"
+CLOCK_DEST="${XDG_DATA_HOME:-$HOME/.local/share}/lightos-clock/assets"
+
+if [[ ! -d "$CLOCK_SOURCE" ]]; then
+    echo "Missing LightOS clock artwork: $CLOCK_SOURCE" >&2
+    exit 1
+fi
+
+mkdir -p "$CLOCK_DEST"
+cp -a "$CLOCK_SOURCE/." "$CLOCK_DEST/"
+printf 'Installed LightOS clock artwork to %s\n' "$CLOCK_DEST"
