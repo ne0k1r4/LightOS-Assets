@@ -50,3 +50,17 @@ fi
 mkdir -p "$CLOCK_DEST"
 cp -a "$CLOCK_SOURCE/." "$CLOCK_DEST/"
 printf 'Installed LightOS clock artwork to %s\n' "$CLOCK_DEST"
+
+# LIGHTOS_SWAYNC_DEATHNOTE_ASSETS
+SWAYNC_SOURCE="$ROOT/assets/swaync/deathnote"
+SWAYNC_DEST="${XDG_CONFIG_HOME:-$HOME/.config}/swaync/themes/lightos-gothic"
+if [[ ! -d "$SWAYNC_SOURCE" ]]; then
+    echo "Missing SwayNC artwork: $SWAYNC_SOURCE" >&2
+    exit 1
+fi
+mkdir -p "$SWAYNC_DEST"
+install -m644 "$SWAYNC_SOURCE/notification-center.png" "$SWAYNC_DEST/swaync-panel-380.png"
+install -m644 "$SWAYNC_SOURCE/notification-card.png" "$SWAYNC_DEST/notification-card-400.png"
+install -m644 "$SWAYNC_SOURCE/clear-button.png" "$SWAYNC_DEST/clear-button.png"
+install -m644 "$SWAYNC_SOURCE/close-button.png" "$SWAYNC_DEST/close-button.png"
+# END_LIGHTOS_SWAYNC_DEATHNOTE_ASSETS
